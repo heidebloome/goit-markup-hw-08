@@ -3,11 +3,11 @@
 }
 
 .team-list {
-  display: flex;
+  // display: flex;
 }
 
 .team-list__item {
-  flex-basis: calc((100% - 90px) / 4);
+  // flex-basis: calc((100% - 90px) / 4);
   border: 0;
 
   border-radius: 0px 0px 4px 4px;
@@ -22,7 +22,7 @@
 }
 
 .team-wrapper {
-  @extend %flex-align;
+  // @extend %flex-align;
   flex-direction: column;
   padding: 30px 0;
 }

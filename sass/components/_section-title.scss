@@ -1,9 +1,16 @@
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   font-weight: 700;
-  @include font(36px, 1.166, 0.03em);
+  @include font(28px, 1.176, 0.03em);
   text-align: center;
 
   color: var(--heading-text-color);
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.166;
+  }
 }
