@@ -1,0 +1,32 @@
+.our-clients-list {
+  display: flex;
+}
+
+.our-clients-list__item {
+  flex-basis: calc((100% - 150px) / 6);
+  height: 92px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.our-clients-list__link {
+  @extend %flex-align-justify;
+
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+
+  color: var(--icon-color);
+
+  transition: border var(--time) var(--cubic), color var(--time) var(--cubic);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+  }
+}
