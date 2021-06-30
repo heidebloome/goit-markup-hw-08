@@ -1,24 +1,53 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   background-image: linear-gradient(
       var(--background-gradient-color),
       var(--background-gradient-color)
     ),
-    url(../images/background.jpg);
-  background-position: center;
+    url(../../images/background480.jpg);
   background-repeat: no-repeat;
-  background-size: 1600px;
+  background-position: center;
+  background-size: 480px;
+
+  @media screen and (max-width: 479px) {
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        var(--background-gradient-color),
+        var(--background-gradient-color)
+      ),
+      url(../../images/background768.jpg);
+    background-size: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: linear-gradient(
+        var(--background-gradient-color),
+        var(--background-gradient-color)
+      ),
+      url(../images/background.jpg);
+    background-size: 1600px;
+  }
 }
 
 .hero__title {
   margin-bottom: 30px;
 
   font-weight: 900;
-  @include font(44px, 1.364, 0.06em);
+  @include font(26px, 1.615, 0.06em);
   text-align: center;
   text-transform: uppercase;
 
   color: var(--white-color);
+
+  @media screen and (min-width: 1200px) {
+    @include font(44px, 1.364, 0.06em);
+  }
 }

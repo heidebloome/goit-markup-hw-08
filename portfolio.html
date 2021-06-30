@@ -339,5 +339,51 @@
         </div>
       </div>
     </footer>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a href="./index.html" class="nav-list__link">Студия</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="./portfolio.html" class="nav-list__link nav-list__link--current">Портфолио</a>
+        </li>
+        <li class="nav-list__item"><a href="" class="nav-list__link">Контакты</a></li>
+      </ul>
+      <ul class="contacts-list">
+        <li class="contacts-list__item">
+          <a href="tel:+380961111111" class="contacts-list__link contacts-list__link--big"
+            >+38 096 111 11 11</a
+          >
+        </li>
+        <li class="contacts-list__item">
+          <a href="mailto:info@devstudio.com" class="contacts-list__link contacts-list__link--small"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="social-link-list">
+        <li class="social-link-list__item">Instagram</li>
+        <li class="social-link-list__item">Twitter</li>
+        <li class="social-link-list__item">Facebook</li>
+        <li class="social-link-list__item">LinkedIn</li>
+      </ul>
+      <button
+        type="button"
+        class="mobile-menu__button mobile-menu__button--position-absolute js-close-menu"
+      >
+        <svg class="icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-menu-close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
