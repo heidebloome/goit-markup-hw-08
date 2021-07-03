@@ -14,6 +14,7 @@
   --background-gradient-color: rgba(47, 48, 58, 0.4);
   --background-our-works-overlay: rgba(47, 48, 58, 0.8);
   --backdrop-color: rgba(0, 0, 0, 0.2);
+  --button-shadow-color: rgba(0, 0, 0, 0.15);
   --border-header-color: #ececec;
   --icon-color: #afb1b8;
   --modal-icon-border-color: rgba(0, 0, 0, 0.1);
@@ -285,6 +286,7 @@ body {
   letter-spacing: 0.06em;
   border: 0;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px var(--button-shadow-color);
   color: var(--white-color);
   background-color: var(--accent-color);
   cursor: pointer;
@@ -305,7 +307,6 @@ body {
 .subscribe-form__button {
   padding: 10px 28px;
   margin-left: 12px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .subscribe-form__button .icon {
@@ -316,7 +317,6 @@ body {
   align-self: center;
   padding: 10px 55px;
   margin-top: 30px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .portfolio-buttons__button {
@@ -691,22 +691,34 @@ body {
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: linear-gradient(var(--background-gradient-color), var(--background-gradient-color)), url(../../images/background480.jpg);
+  background-image: linear-gradient(var(--background-gradient-color), var(--background-gradient-color)), url(..//..//images/hero-background/background-mobile-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 480px;
+  background-size: cover;
 }
 
-@media screen and (max-width: 479px) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-size: cover;
+    background-image: linear-gradient(var(--background-gradient-color), var(--background-gradient-color)), url(..//..//images/hero-background/background-mobile-2x.jpg);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .hero {
+    background-size: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(var(--background-gradient-color), var(--background-gradient-color)), url(../../images/background768.jpg);
+    background-image: linear-gradient(var(--background-gradient-color), var(--background-gradient-color)), url(..//..//images/hero-background/background-tablet-1x.jpg);
     background-size: 768px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--background-gradient-color), var(--background-gradient-color)), url(..//..//images/hero-background/background-tablet-2x.jpg);
   }
 }
 
@@ -714,8 +726,14 @@ body {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(var(--background-gradient-color), var(--background-gradient-color)), url(../images/background.jpg);
+    background-image: linear-gradient(var(--background-gradient-color), var(--background-gradient-color)), url(..//..//images/hero-background/background-desktop-1x.jpg);
     background-size: 1600px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--background-gradient-color), var(--background-gradient-color)), url(..//..//images/hero-background/background-desktop-2x.jpg);
   }
 }
 
@@ -734,7 +752,6 @@ body {
   .hero__title {
     font-size: 44px;
     line-height: 1.364;
-    letter-spacing: 0.06em;
   }
 }
 
