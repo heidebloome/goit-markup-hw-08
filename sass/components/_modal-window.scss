@@ -22,19 +22,31 @@
 
 .modal {
   position: absolute;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 528px;
-  height: 581px;
   padding: 40px;
+  // height: 581px;
 
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   background-color: var(--white-color);
+
+  @media screen and (max-width: 479px) {
+    width: 95%;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 }
 
 .modal__button {
@@ -68,10 +80,14 @@
   margin-bottom: 12px;
 
   font-weight: 700;
-  @include font(20px, 1.15, 0.03em);
+  @include font(20px, 1.5, 0.03em);
   text-align: center;
 
   color: var(--heading-text-color);
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 
 .modal-form {
@@ -164,10 +180,15 @@
   @extend %flex-align-justify;
   margin-top: 10px;
 
-  @include font(14px, 1.714, 0.03em);
+  @include font(12px, 1.667, 0.03em);
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.714;
   }
 }
 
