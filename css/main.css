@@ -1179,8 +1179,10 @@ body {
   margin-right: 8px;
 }
 
-.portfolio-list {
-  width: 100%;
+@media screen and (max-width: 767px) {
+  .portfolio-list {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {

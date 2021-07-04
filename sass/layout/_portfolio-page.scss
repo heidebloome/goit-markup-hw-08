@@ -25,7 +25,9 @@
 }
 
 .portfolio-list {
-  width: 100%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -48,29 +50,9 @@
     margin-bottom: 30px;
   }
 
-  // @media screen and (min-width: 768px) and (max-width: 1199px) {
-  //   width: calc((100% - 30px) / 2);
-  //   &:not(:nth-child(2n)) {
-  //     margin-right: 30px;
-  //   }
-  //   &:not(:nth-last-child(-n + 1)) {
-  //     margin-bottom: 30px;
-  //   }
-  // }
-
   @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 90px) / 3);
   }
-
-  // @media screen and (min-width: 1200px) {
-  //   flex-basis: calc((100% - 60px) / 3);
-  //   &:not(:nth-child(3n)) {
-  //     margin-right: 30px;
-  //   }
-  //   &:not(:nth-last-child(-n + 3)) {
-  //     margin-bottom: 30px;
-  //   }
-  // }
 }
 
 .portfolio-list__link {
