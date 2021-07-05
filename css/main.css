@@ -138,6 +138,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -447,6 +448,12 @@ body {
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--white-color);
+}
+
+@media screen and (max-width: 479px) {
+  .modal {
+    padding: 15px;
+  }
 }
 
 @media screen and (max-width: 479px) {
