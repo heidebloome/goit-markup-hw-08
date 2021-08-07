@@ -3,3 +3,9 @@
   line-height: $lh;
   letter-spacing: $ls;
 }
+
+@mixin before-mobile {
+  @media screen and (max-width: 479px) {
+    @content;
+  }
+} ;
