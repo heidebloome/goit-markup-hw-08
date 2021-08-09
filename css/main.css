@@ -314,8 +314,8 @@ body {
   border: 0;
   border-radius: 4px;
   box-shadow: 0px 4px 4px var(--button-shadow-color);
-  color: var(--white-color);
-  background-color: var(--accent-color);
+  color: #ffffff;
+  background-color: #2196f3;
   cursor: pointer;
   transition: background-color var(--time) var(--cubic);
 }
@@ -357,8 +357,8 @@ body {
 }
 
 .portfolio-buttons__button:hover, .portfolio-buttons__button:focus, .portfolio-buttons__button--first {
-  color: var(--white-color);
-  background-color: var(--accent-color);
+  color: #ffffff;
+  background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
