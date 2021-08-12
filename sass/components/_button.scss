@@ -4,21 +4,19 @@
   font-weight: 700;
   @include font(16px, 1.875, 0.06em);
 
-  border: 0;
-  border-radius: 4px;
-
-  box-shadow: 0px 4px 4px var(--button-shadow-color);
-
   color: $whiteColor;
   background-color: $accentColor;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: $buttonBoxShadowColor;
+
+  transition: background-color $transitionDuration $transitionTimingFunction;
 
   cursor: pointer;
 
-  transition: background-color var(--time) var(--cubic);
-
   &:hover,
   &:focus {
-    background-color: var(--hero-button-hover-color);
+    background-color: $accentButtonHoverColor;
   }
 }
 
@@ -51,21 +49,19 @@
   line-height: 1.625;
   letter-spacing: 0.03em;
 
+  color: $headingTextColor;
+  background-color: $backgroundLightColor;
   box-shadow: none;
 
-  color: var(--heading-text-color);
-  background-color: var(--background-light-color);
-
-  transition: color var(--time) var(--cubic), background-color var(--time) var(--cubic),
-    box-shadow var(--time) var(--cubic);
+  transition: color $transitionDuration $transitionTimingFunction,
+    background-color $transitionDuration $transitionTimingFunction,
+    box-shadow $transitionDuration $transitionTimingFunction;
 
   &:hover,
   &:focus,
   &--first {
     color: $whiteColor;
     background-color: $accentColor;
-
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: $boxShadowColor;
   }
 }

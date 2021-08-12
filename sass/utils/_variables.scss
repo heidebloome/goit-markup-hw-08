@@ -2,8 +2,16 @@ $primaryTextColor: #757575;
 $headingTextColor: #212121;
 $accentColor: #2196f3;
 $accentColorOpacity90: rgba(33, 150, 243, 0.9);
+$accentButtonHoverColor: #188ce8;
 $blackColor: #000000;
 $whiteColor: #ffffff;
+$boxShadowColor: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+$buttonBoxShadowColor: 0px 4px 4px rgba(0, 0, 0, 0.15);
+$backgroundLightColor: #f5f4fa;
+
+$transitionDuration: 250ms;
+$transitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
 
 :root {
   --heading-text-color: #212121;
