@@ -5,9 +5,9 @@
   @include font(28px, 1.176, 0.03em);
   text-align: center;
 
-  color: var(--heading-text-color);
+  color: $headingTextColor;
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     margin-bottom: 50px;
 
     font-size: 36px;

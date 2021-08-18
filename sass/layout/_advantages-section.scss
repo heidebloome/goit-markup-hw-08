@@ -1,14 +1,14 @@
 .advantages-list {
   width: 100%;
 
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
 .advantages-list__item {
-  @media screen and (max-width: 767px) {
+  @include for-size(before-tablet) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -24,7 +24,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     flex-basis: calc((100% - 3 * 30px) / 4);
     &:not(:last-child) {
       margin-right: 30px;
@@ -38,7 +38,7 @@
   height: 120px;
   margin-bottom: 30px;
 
-  background-color: var(--background-light-color);
+  background-color: $backgroundLightColor;
 }
 
 .advantages-list__title {
@@ -48,9 +48,9 @@
   @include font(14px, 1.143, 0.03em);
   text-transform: uppercase;
 
-  color: var(--heading-text-color);
+  color: $headingTextColor;
 
-  @media screen and (max-width: 767px) {
+  @include for-size(before-tablet) {
     text-align: center;
   }
 }
