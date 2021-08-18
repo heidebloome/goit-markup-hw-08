@@ -3,9 +3,9 @@
   font-weight: 700;
   @include font(24px, 1.167, 0.03em);
 
-  color: var(--accent-color);
+  color: $accentColor;
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     font-size: 26px;
     line-height: 1.1923;
   }
@@ -15,14 +15,14 @@
   display: block;
 
   &--color-black {
-    color: var(--black-color);
+    color: $blackColor;
   }
 
-  @media screen and (max-width: 767px) {
+  @include for-size(before-tablet) {
     padding: 16px 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     margin-right: 93px;
   }
 }
@@ -32,6 +32,6 @@
   margin-bottom: 20px;
 
   &--color-white {
-    color: var(--white-color);
+    color: $whiteColor;
   }
 }

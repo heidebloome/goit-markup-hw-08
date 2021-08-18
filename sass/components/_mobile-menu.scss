@@ -2,26 +2,25 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   z-index: 2;
+  transform: translateX(100%);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
   padding: 48px 40px;
 
-  background-color: var(--white-color);
+  background-color: $whiteColor;
 
-  transform: translateX(100%);
-
-  transition: transform var(--time) var(--cubic);
+  @extend %transition-transform;
 
   &.is-open {
     transform: translateX(0);
   }
 
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     display: none;
   }
 }
@@ -29,13 +28,12 @@
 .mobile-menu__button {
   padding: 0;
 
-  border: 0;
-
   background-color: transparent;
+  border: 0;
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: $accentColor;
   }
 
   &--close {
@@ -44,7 +42,7 @@
     right: 15px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     display: none;
   }
 
@@ -61,15 +59,16 @@
   font-weight: 500;
   @include font(40px, 1.175, 0.02em);
 
-  color: var(--heading-text-color);
+  color: $headingTextColor;
 
   &--current {
-    color: var(--accent-color);
+    color: $accentColor;
   }
 }
 
 .contacts-list {
   margin-bottom: 64px;
+
   &__item:not(:last-child) {
     margin-bottom: 32px;
   }
@@ -80,9 +79,9 @@
     font-weight: 500;
     @include font(24px, 1.167, 0.02em);
 
-    color: var(--accent-color);
+    color: $accentColor;
 
-    @media screen and (min-width: 480px) {
+    @include for-size(mobile) {
       font-size: 34px;
       line-height: 1.176;
     }
@@ -103,11 +102,13 @@
   &__item:not(:last-child) {
     margin-right: 10px;
     padding-right: 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+    border-right: $mobileMenuBorder;
   }
 
-  @media screen and (max-width: 479px) {
+  @include for-size(before-mobile) {
     flex-wrap: wrap;
+
     &__item {
       margin-bottom: 10px;
     }
@@ -118,5 +119,5 @@
   font-weight: 500;
   @include font(18px, 1.222, 0.02em);
 
-  color: var(--accent-color);
+  color: $accentColor;
 }

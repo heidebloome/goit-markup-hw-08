@@ -10,7 +10,7 @@
   border-radius: 4px;
   box-shadow: $buttonBoxShadowColor;
 
-  transition: background-color $transitionDuration $transitionTimingFunction;
+  @extend %transition-background;
 
   cursor: pointer;
 
@@ -38,8 +38,8 @@
 
 .modal-form__button {
   align-self: center;
-  padding: 10px 55px;
   margin-top: 30px;
+  padding: 10px 55px;
 }
 
 .portfolio-buttons__button {
@@ -53,9 +53,9 @@
   background-color: $backgroundLightColor;
   box-shadow: none;
 
-  transition: color $transitionDuration $transitionTimingFunction,
-    background-color $transitionDuration $transitionTimingFunction,
-    box-shadow $transitionDuration $transitionTimingFunction;
+  @extend %transition-background;
+  @extend %transition-color;
+  @extend %transition-box-shadow;
 
   &:hover,
   &:focus,
