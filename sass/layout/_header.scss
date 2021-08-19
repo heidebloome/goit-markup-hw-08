@@ -4,7 +4,7 @@
   .container {
     @extend %flex-align;
 
-    @media screen and (max-width: 1199px) {
+    @include for-size(before-desktop) {
       justify-content: space-between;
     }
   }

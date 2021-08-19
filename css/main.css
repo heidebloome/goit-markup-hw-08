@@ -53,7 +53,7 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-buttons__button, .social-list__link {
+.portfolio-buttons__button, .social-list__link, .footer-contacts__link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1070,7 +1070,7 @@ body {
 }
 
 .footer {
-  background-color: var(--background-dark-color);
+  background-color: #2f303a;
 }
 
 .footer .container {
@@ -1128,7 +1128,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--white-color);
+  color: #ffffff;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1153,12 +1153,11 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--white-color-opacity60);
-  transition: color var(--time) var(--cubic);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-contacts__link:hover, .footer-contacts__link:focus {
-  color: var(--accent-color);
+  color: #2196f3;
 }
 
 @media screen and (max-width: 1199px) {
@@ -1171,7 +1170,7 @@ body {
 }
 
 .social-box .icon {
-  fill: var(--white-color);
+  fill: #ffffff;
 }
 
 @media screen and (max-width: 1199px) {
@@ -1205,10 +1204,10 @@ body {
   width: 100%;
   margin-bottom: 20px;
   padding: 15px;
+  color: #ffffff;
+  background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  background-color: transparent;
-  color: var(--white-color);
   cursor: pointer;
 }
 

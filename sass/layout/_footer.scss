@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--background-dark-color);
+  background-color: $backgroundDarkColor;
 
   .container {
     padding-top: 60px;
@@ -31,14 +31,14 @@
 }
 
 .address-box {
-  @media screen and (max-width: 1199px) {
+  @include for-size(before-desktop) {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     margin-right: 70px;
   }
 
@@ -48,22 +48,22 @@
     font-style: normal;
     @include font(14px, 1.71, 0.03em);
 
-    color: var(--white-color);
+    color: $whiteColor;
 
-    @media screen and (min-width: 1200px) {
+    @include for-size(desktop) {
       margin-bottom: 9px;
     }
   }
 }
 
 .footer-contacts__item {
-  @media screen and (max-width: 1199px) {
+  @include for-size(before-desktop) {
     &:nth-child(1) {
       margin-bottom: 8px;
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     &:nth-child(1) {
       margin-bottom: 9px;
     }
@@ -73,18 +73,18 @@
 .footer-contacts__link {
   @include font(14px, 1.71, 0.03em);
 
-  color: var(--white-color-opacity60);
+  color: $whiteColorOpacity60;
 
-  transition: color var(--time) var(--cubic);
+  @extend %transition-color;
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: $accentColor;
   }
 }
 
 .social-box {
-  @media screen and (max-width: 1199px) {
+  @include for-size(before-desktop) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,18 +92,18 @@
   }
 
   .icon {
-    fill: var(--white-color);
+    fill: $whiteColor;
   }
 }
 
 .subscribe-box {
-  @media screen and (max-width: 1199px) {
+  @include for-size(before-desktop) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     margin-left: auto;
   }
 }
@@ -111,7 +111,7 @@
 .subscribe-form {
   display: flex;
 
-  @media screen and (max-width: 1199px) {
+  @include for-size(before-desktop) {
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -124,11 +124,10 @@
   margin-bottom: 20px;
   padding: 15px;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
+  color: $whiteColor;
   background-color: transparent;
-
-  color: var(--white-color);
+  border: 1px solid $whiteColorOpacity30;
+  border-radius: 4px;
 
   cursor: pointer;
 
@@ -136,7 +135,7 @@
     width: 450px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     width: 358px;
     margin-right: 12px;
     margin-bottom: 0;
