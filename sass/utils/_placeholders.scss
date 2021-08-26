@@ -33,6 +33,11 @@
   transition: visibility $transitionDuration $transitionTimingFunction;
 }
 
+%transition-opacity-visibility {
+  transition: opacity $transitionDuration $transitionTimingFunction,
+    visibility $transitionDuration $transitionTimingFunction;
+}
+
 %transition-fill {
   transition: fill $transitionDuration $transitionTimingFunction;
 }

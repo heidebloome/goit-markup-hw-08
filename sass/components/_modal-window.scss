@@ -11,8 +11,7 @@
   visibility: visible;
   opacity: 1;
 
-  @extend %transition-opacity;
-  @extend %transition-visibility;
+  @extend %transition-opacity-visibility;
 
   &.is-hidden {
     visibility: hidden;
@@ -27,6 +26,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  // при повороте экрана появляется вертикальная прокрутка
+  overflow-y: auto;
+  max-height: 90%;
+  // при повороте экрана появляется вертикальная прокрутка
+
   padding: 40px;
 
   background-color: $whiteColor;
@@ -35,7 +39,8 @@
 
   @include for-size(before-mobile) {
     width: 95%;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   @include for-size(mobile) {
@@ -58,7 +63,7 @@
 
   background-color: $whiteColor;
   border-radius: 50%;
-  border: $modalButtonBorder;
+  border: 1px solid $blackColorOpacity10;
 
   &:hover {
     cursor: pointer;
@@ -81,7 +86,7 @@
   @include font(20px, 1.5, 0.03em);
   text-align: center;
 
-  color: var(--heading-text-color);
+  color: $headingTextColor;
 
   @include for-size(desktop) {
     line-height: 1.15;
@@ -108,7 +113,7 @@
   margin-top: 4px;
   padding-left: 42px;
 
-  border: $modalInputBorder;
+  border: 1px solid $modalInputBorder;
   border-radius: 4px;
 
   @extend %transition-border-color;
@@ -149,7 +154,7 @@
   padding: 12px 16px;
   margin-top: 4px;
 
-  border: $modalInputBorder;
+  border: 1px solid $modalInputBorder;
   border-radius: 4px;
 
   resize: none;
@@ -196,7 +201,7 @@
   height: 15px;
   margin-right: 8px;
 
-  border: $modalCheckboxBorder;
+  border: 2px solid $headingTextColor;
   border-radius: 3px;
 
   @extend %transition-border-color;
@@ -213,7 +218,7 @@
   }
 
   .modal-policy__checkbox:focus + & {
-    outline: $modalCheckboxOutline;
+    outline: 1px solid $accentColor;
     outline-offset: 2px;
   }
 }
