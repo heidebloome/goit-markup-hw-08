@@ -56,9 +56,10 @@
   top: 8px;
   right: 8px;
 
-  @extend %flex-align-justify;
+  // @extend %flex-align-justify;
   width: 30px;
   height: 30px;
+  padding: 5px;
 
   background-color: $whiteColor;
   border-radius: 50%;

@@ -39,7 +39,7 @@
   align-items: center;
 }
 
-.social-list__link, .modal__button, .modal-policy, .modal-policy__custom-checkbox, .advantages-list__img, .our-clients-list__link {
+.social-list__link, .modal-policy, .modal-policy__custom-checkbox, .advantages-list__img, .our-clients-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -501,6 +501,7 @@ body {
   right: 8px;
   width: 30px;
   height: 30px;
+  padding: 5px;
   background-color: #ffffff;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
