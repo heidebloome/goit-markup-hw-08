@@ -1,5 +1,5 @@
 .header {
-  border-bottom: 1px solid var(--border-header-color);
+  border-bottom: 1px solid $borderHeaderColor;
 
   .container {
     @extend %flex-align;
@@ -11,7 +11,7 @@
 }
 
 .nav {
-  @media screen and (max-width: 767px) {
+  @include for-size(before-tablet) {
     display: none;
   }
 }
@@ -36,18 +36,18 @@
   font-weight: 500;
   @include font(14px, 1.143, 0.02em);
 
-  color: var(--heading-text-color);
+  color: $headingTextColor;
 
-  transition: color var(--time) var(--cubic);
+  @extend %transition-color;
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: $accentColor;
   }
 }
 
 .nav__link--current {
-  color: var(--accent-color);
+  color: $accentColor;
 
   &::after {
     position: absolute;
@@ -59,29 +59,29 @@
     height: 4px;
 
     content: '';
-    background-color: var(--accent-color);
+    background-color: $accentColor;
   }
 }
 
 .header-contacts {
-  @media screen and (max-width: 767px) {
+  @include for-size(before-tablet) {
     display: none;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     display: flex;
     margin-left: auto;
   }
 }
 
 .header-contacts__item {
-  @media screen and (max-width: 1199px) {
+  @include for-size(before-desktop) {
     &:not(:last-child) {
       margin-bottom: 10px;
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     &:not(:last-child) {
       margin-right: 30px;
     }
@@ -94,14 +94,14 @@
   font-weight: 500;
   @include font(12px, 1.167, 0.02em);
 
-  transition: color var(--time) var(--cubic);
+  @extend %transition-color;
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: $accentColor;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     padding-top: 32px;
     padding-bottom: 31px;
 
@@ -111,11 +111,11 @@
 }
 
 .header-contacts__icon {
-  @media screen and (min-width: 768px) {
+  @include for-size(before-tablet) {
     margin-right: 8px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     margin-right: 10px;
   }
 }

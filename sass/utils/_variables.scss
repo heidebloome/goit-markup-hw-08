@@ -21,6 +21,11 @@ $whiteColorOpacity60: rgba(255, 255, 255, 0.6);
 // background colors
 $backgroundLightColor: #f5f4fa;
 $backgroundDarkColor: #2f303a;
+$backgroundGradientColor: rgba(47, 48, 58, 0.4);
+
+// additional colors
+$iconColor: #afb1b8;
+$borderHeaderColor: #ececec;
 
 // modal window additional colors
 $backdropColor: rgba(0, 0, 0, 0.2);
@@ -30,9 +35,6 @@ $modalTextareaPlaceholder: rgba(117, 117, 117, 0.5);
 // transition properties
 $transitionDuration: 250ms;
 $transitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
-
-$iconColor: #afb1b8;
-$mobileMenuBorder: 1px solid rgba(33, 33, 33, 0.2);
 
 :root {
   --heading-text-color: #212121;

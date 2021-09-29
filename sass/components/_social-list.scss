@@ -19,8 +19,7 @@
   border: 0;
   border-radius: 50%;
 
-  @extend %transition-backgroundColor;
-  @extend %transition-color;
+  @extend %transition-backgroundColor-color;
 
   .team-wrapper & {
     color: $iconColor;

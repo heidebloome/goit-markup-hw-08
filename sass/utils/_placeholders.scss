@@ -25,11 +25,11 @@
   transition: fill $transitionDuration $transitionTimingFunction;
 }
 
-//
-
 %transition-color {
   transition: color $transitionDuration $transitionTimingFunction;
 }
+
+//
 
 %transition-box-shadow {
   transition: box-shadow $transitionDuration $transitionTimingFunction;
@@ -54,4 +54,9 @@
 %transition-opacity-visibility {
   transition: opacity $transitionDuration $transitionTimingFunction,
     visibility $transitionDuration $transitionTimingFunction;
+}
+
+%transition-backgroundColor-color {
+  transition: background-color $transitionDuration $transitionTimingFunction,
+    color $transitionDuration $transitionTimingFunction;
 }
