@@ -19,7 +19,7 @@
   border: 0;
   border-radius: 50%;
 
-  @extend %transition-background;
+  @extend %transition-backgroundColor;
   @extend %transition-color;
 
   .team-wrapper & {

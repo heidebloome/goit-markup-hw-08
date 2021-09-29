@@ -13,9 +13,19 @@
   transition: transform $transitionDuration $transitionTimingFunction;
 }
 
-%transition-background {
+%transition-backgroundColor {
   transition: background-color $transitionDuration $transitionTimingFunction;
 }
+
+%transition-borderColor {
+  transition: border-color $transitionDuration $transitionTimingFunction;
+}
+
+%transition-fill {
+  transition: fill $transitionDuration $transitionTimingFunction;
+}
+
+//
 
 %transition-color {
   transition: color $transitionDuration $transitionTimingFunction;
@@ -33,15 +43,15 @@
   transition: visibility $transitionDuration $transitionTimingFunction;
 }
 
+//
+
+%transition-backgroundColor-color-boxShadow {
+  transition: background-color $transitionDuration $transitionTimingFunction,
+    color $transitionDuration $transitionTimingFunction,
+    box-shadow $transitionDuration $transitionTimingFunction;
+}
+
 %transition-opacity-visibility {
   transition: opacity $transitionDuration $transitionTimingFunction,
     visibility $transitionDuration $transitionTimingFunction;
-}
-
-%transition-fill {
-  transition: fill $transitionDuration $transitionTimingFunction;
-}
-
-%transition-border-color {
-  transition: border-color $transitionDuration $transitionTimingFunction;
 }

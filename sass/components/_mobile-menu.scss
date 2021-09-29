@@ -10,7 +10,7 @@
   justify-content: space-between;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
+  padding: 50px 40px 140px 40px;
 
   background-color: $whiteColor;
 
@@ -75,35 +75,19 @@
 }
 
 .contacts-list__link {
-  &--big {
-    font-weight: 500;
-    @include font(24px, 1.167, 0.02em);
-
-    color: $accentColor;
-
-    @include for-size(mobile) {
-      font-size: 34px;
-      line-height: 1.176;
-    }
-  }
-
-  &--small {
-    font-weight: 500;
-    @include font(24px, 1.167, 0.02em);
-
-    color: inherit;
-  }
+  font-weight: 500;
+  @include font(24px, 1.167, 0.02em);
 }
 
 .social-link-list {
   display: flex;
   align-items: center;
 
-  &__item:not(:last-child) {
+  &__item {
     margin-right: 10px;
     padding-right: 10px;
 
-    border-right: $mobileMenuBorder;
+    border-right: 1px solid $modalInputBorder;
   }
 
   @include for-size(before-mobile) {

@@ -10,6 +10,7 @@ $accentButtonHoverColor: #188ce8;
 // black color
 $blackColor: #000000;
 $blackColorOpacity10: rgba(0, 0, 0, 0.1);
+$blackColorOpacity15: rgba(0, 0, 0, 0.15);
 
 // white color
 $whiteColor: #ffffff;
@@ -23,8 +24,6 @@ $backgroundDarkColor: #2f303a;
 
 // modal window additional colors
 $backdropColor: rgba(0, 0, 0, 0.2);
-$modalWindowBoxShadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-  0px 2px 1px rgba(0, 0, 0, 0.2);
 $modalInputBorder: rgba(33, 33, 33, 0.2);
 $modalTextareaPlaceholder: rgba(117, 117, 117, 0.5);
 
@@ -32,9 +31,6 @@ $modalTextareaPlaceholder: rgba(117, 117, 117, 0.5);
 $transitionDuration: 250ms;
 $transitionTimingFunction: cubic-bezier(0.4, 0, 0.2, 1);
 
-$boxShadowColor: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-  0px 2px 2px rgba(0, 0, 0, 0.12);
-$buttonBoxShadowColor: 0px 4px 4px rgba(0, 0, 0, 0.15);
 $iconColor: #afb1b8;
 $mobileMenuBorder: 1px solid rgba(33, 33, 33, 0.2);
 

@@ -34,7 +34,8 @@
 
   background-color: $whiteColor;
   border-radius: 4px;
-  box-shadow: $modalWindowBoxShadow;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 
   @include for-size(before-mobile) {
     width: 95%;
@@ -56,7 +57,6 @@
   top: 8px;
   right: 8px;
 
-  // @extend %flex-align-justify;
   width: 30px;
   height: 30px;
   padding: 5px;
@@ -116,7 +116,7 @@
   border: 1px solid $modalInputBorder;
   border-radius: 4px;
 
-  @extend %transition-border-color;
+  @extend %transition-borderColor;
 
   &:hover {
     cursor: pointer;
@@ -159,7 +159,7 @@
 
   resize: none;
 
-  @extend %transition-border-color;
+  @extend %transition-borderColor;
 
   &:hover {
     cursor: pointer;
@@ -197,6 +197,9 @@
 
 .modal-policy__custom-checkbox {
   @extend %flex-align-justify;
+  flex-shrink: 0;
+  flex-grow: 0;
+
   width: 16px;
   height: 15px;
   margin-right: 8px;
@@ -204,8 +207,8 @@
   border: 2px solid $headingTextColor;
   border-radius: 3px;
 
-  @extend %transition-border-color;
-  @extend %transition-background;
+  @extend %transition-borderColor;
+  @extend %transition-backgroundColor;
 
   .modal-policy__checkbox:checked + & {
     background-color: $accentColor;

@@ -8,9 +8,9 @@
   background-color: $accentColor;
   border: 0;
   border-radius: 4px;
-  box-shadow: $buttonBoxShadowColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  @extend %transition-background;
+  @extend %transition-backgroundColor;
 
   cursor: pointer;
 
@@ -53,15 +53,14 @@
   background-color: $backgroundLightColor;
   box-shadow: none;
 
-  @extend %transition-background;
-  @extend %transition-color;
-  @extend %transition-box-shadow;
+  @extend %transition-backgroundColor-color-boxShadow;
 
   &:hover,
   &:focus,
   &--first {
     color: $whiteColor;
     background-color: $accentColor;
-    box-shadow: $boxShadowColor;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
