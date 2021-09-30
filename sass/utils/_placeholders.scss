@@ -29,21 +29,9 @@
   transition: color $transitionDuration $transitionTimingFunction;
 }
 
-//
-
-%transition-box-shadow {
+%transition-boxShadow {
   transition: box-shadow $transitionDuration $transitionTimingFunction;
 }
-
-%transition-opacity {
-  transition: opacity $transitionDuration $transitionTimingFunction;
-}
-
-%transition-visibility {
-  transition: visibility $transitionDuration $transitionTimingFunction;
-}
-
-//
 
 %transition-backgroundColor-color-boxShadow {
   transition: background-color $transitionDuration $transitionTimingFunction,

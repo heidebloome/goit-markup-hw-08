@@ -2,16 +2,16 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 767px) {
+  @include for-size(before-tablet) {
     margin-bottom: 25px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     justify-content: center;
     margin-bottom: 30px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     margin-bottom: 50px;
   }
 }
@@ -25,11 +25,11 @@
 }
 
 .portfolio-list {
-  @media screen and (max-width: 767px) {
+  @include for-size(before-tablet) {
     width: 100%;
   }
 
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
@@ -38,19 +38,19 @@
 }
 
 .portfolio-list__item {
-  @media screen and (max-width: 767px) {
+  @include for-size(before-tablet) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     width: calc((100% - 60px) / 2);
     margin-right: 30px;
     margin-bottom: 30px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     flex-basis: calc((100% - 90px) / 3);
   }
 }
@@ -61,7 +61,7 @@
   width: 100%;
   height: 100%;
 
-  transition: box-shadow var(--time) var(--cubic);
+  @extend %transition-boxShadow;
 
   &:hover,
   &:focus {
@@ -84,10 +84,10 @@
 
   @include font(18px, 1.555, 0.03em);
 
-  color: var(--white-color);
-  background-color: var(--accent-color-opacity90);
+  color: $whiteColor;
+  background-color: $accentColorOpacity90;
 
-  transition: transform var(--time) var(--cubic);
+  @extend %transition-transform;
 
   .portfolio-list__link:hover &,
   .portfolio-list__link:focus & {
@@ -102,7 +102,7 @@
   border: 1px solid #eeeeee;
   border-top: none;
 
-  background-color: var(--white-color);
+  background-color: $whiteColor;
 }
 
 .portfolio-list__title {
@@ -111,7 +111,7 @@
   font-weight: 700;
   @include font(18px, 2, 0.06em);
 
-  color: var(--heading-text-color);
+  color: $headingTextColor;
 }
 
 .portfolio-list__description {

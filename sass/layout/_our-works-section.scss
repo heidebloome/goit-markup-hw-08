@@ -1,4 +1,4 @@
-@media screen and (max-width: 1199px) {
+@include for-size(before-desktop) {
   .our-works {
     display: none;
   }
@@ -31,6 +31,6 @@
   text-align: center;
   text-transform: uppercase;
 
-  background-color: var(--background-our-works-overlay);
-  color: var(--white-color);
+  background-color: $backgroundOurWorkSectionColor;
+  color: $whiteColor;
 }

@@ -6,7 +6,7 @@
 .our-clients-list__item {
   height: 92px;
 
-  @media screen and (max-width: 767px) {
+  @include for-size(before-tablet) {
     width: calc((100% - 30px) / 2);
     &:not(:nth-child(2n)) {
       margin-right: 30px;
@@ -16,7 +16,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @include for-size(tablet) {
     width: calc((100% - 2 * 30px) / 3);
     &:not(:nth-child(3n)) {
       margin-right: 30px;
@@ -26,7 +26,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     width: calc((100% - 5 * 30px) / 6);
     &:not(:last-child) {
       margin-right: 30px;
@@ -36,20 +36,19 @@
 
 .our-clients-list__link {
   @extend %flex-align-justify;
-
   width: 100%;
   height: 100%;
 
-  border: 1px solid var(--icon-color);
+  color: $iconColor;
+
+  border: 1px solid $iconColor;
   border-radius: 4px;
 
-  color: var(--icon-color);
-
-  transition: border-color var(--time) var(--cubic), color var(--time) var(--cubic);
+  @extend %transition-backgroundColor-color;
 
   &:hover,
   &:focus {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
+    border-color: $accentColor;
+    color: $accentColor;
   }
 }

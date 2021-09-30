@@ -15,9 +15,9 @@
   @include for-size(before-mobile) {
     background-size: auto 100%;
   }
+
   @include for-size(mobile) {
     background-size: 480px;
-    background-size: cover;
   }
 
   @include for-size(tablet) {
@@ -54,9 +54,9 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: var(--white-color);
+  color: $whiteColor;
 
-  @media screen and (min-width: 1200px) {
+  @include for-size(desktop) {
     font-size: 44px;
     line-height: 1.364;
   }
